@@ -1,11 +1,12 @@
 {
   "name": "authguard",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "🔐🔑 Authentication and authorization API for OAuth, token-based and session-based flows",
+  "main": "server.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon ./src/server.js | npx pino-pretty",
+    "start": "node ./src/server.js"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,18 @@
     "eslint-config-standard": "^17.0.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-n": "^15.3.0",
-    "eslint-plugin-promise": "^6.0.1"
+    "eslint-plugin-promise": "^6.0.1",
+    "nodemon": "^2.0.20",
+    "pino-pretty": "^9.1.1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "passport": "^0.6.0",
+    "passport-http-bearer": "^1.0.1",
+    "passport-jwt": "^4.0.0",
+    "pino": "^8.7.0"
   }
 }
